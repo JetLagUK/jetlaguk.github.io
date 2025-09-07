@@ -1,0 +1,13 @@
+{
+  "name": "jetlaguk-github-io-eleventy",
+  "version": "1.0.0",
+  "description": "Eleventy site that generates three rules pages",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
