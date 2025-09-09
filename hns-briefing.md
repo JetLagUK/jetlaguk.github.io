@@ -39,7 +39,7 @@ This hider needs to provide their email to the seeker in DMs. To share your loca
 
 The hiders choose a transit stop on which to centre their hiding zone. Depending on the game map you're playing, the "transit stop" may be
 a bus stop, a tram stop, a train station, or any one of these. The "hiding zone" is a {{ hiding_radius[combo.size.name][combo.unit.name] }} radius
-circle centred on the transit stop. During the hiding period, the hiders have {{ combo.size.hiding_time }} to travel to their transit stop using
+circle centred on the transit stop. During the hiding period, the hiders have {{ combo.size.hiding_period }} to travel to their transit stop using
 any allowed means of transport, during which time the seekers are frozen at the start location.
 
 ### Middle Game

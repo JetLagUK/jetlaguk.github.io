@@ -2,19 +2,16 @@
   {
     "name": "small",
     "hiding_period": "30 minutes",
-    "hiding_radius": "500m",
     "photo_question_time_limit": "10 minutes"
   },
   {
     "name": "medium",
     "hiding_period": "1 hour",
-    "hiding_radius": "500m",
     "photo_question_time_limit": "10 minutes"
   },
   {
     "name": "large",
     "hiding_period": "3 hours",
-    "hiding_radius": "1km",
     "photo_question_time_limit": "15 minutes"
   }
 ]
