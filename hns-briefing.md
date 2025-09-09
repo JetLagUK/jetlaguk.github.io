@@ -1,0 +1,174 @@
+---
+pagination:
+  data: sizes
+  size: 1
+  alias: size
+layout: layout.njk
+permalink: "/hns-briefing-{{ size.size }}-{{ size.units }}.html"
+---
+
+# Hide and Seek Briefing ({{ size.size | capitalize }} Games)
+
+Hide and Seek is a game where the hiders try to hide in a hiding zone, and the seekers try to find them as quickly as possible. The seekers
+ask questions from a set list of allowed questions, which the hiders must answer truthfully. As a reward for answering, the hiders draw 
+cards from a deck which may be used to benefit themselves or slow down the seekers. After each round, the roles rotate, with the new hiders
+finding a new location to hide in. At the end of the game, the team who has hidden the longest without being found wins.
+
+## Before You Start
+
+Before you arrive, bring a power bank, as you will be using your phone a lot and your battery will drain fast, especially if you have the
+tracker enabled. Also bring a water bottle, and a packed lunch if you are planning on hiding somewhere rural without shops or restaurants.
+
+Both the hiders and the seekers need at least one person sharing their location with the helpdesk, whose gmail address is
+`jetlaglondon@gmail.com`. One person from the seekers team also needs to share their location with at least one person from the hiders team.
+This hider needs to provide their email to the seeker in DMs. To share your location:
+- Open Google Maps.
+- Tap your profile in the top right of your screen.
+- Tap "location sharing".
+- Press "new share".
+- Press the "+" button next to where it says "for 1 hour", until the time is increased such that you're sharing until the end of the game.
+  We do not recommend clicking "until you turn this off", as you may forget to turn it off and then you could end up sharing where you live.
+- Under "sugggestions", scroll all the way to the right and click "more".
+- Type in the gmail address of who you want to share with, and then click on them.
+
+## Game Cycle
+
+### Hiding Period
+
+The hiders choose a transit stop on which to centre their hiding zone. Depending on the game map you're playing, the "transit stop" may be
+a bus stop, a tram stop, a train station, or any one of these. The "hiding zone" is a {{ size.hiding_radius }} radius circle centred on the
+transit stop. During the hiding period, the hiders have {{ size.hiding_time }} to travel to their transit stop using any allowed means of
+transport, during which time the seekers are frozen at the start location.
+
+### Middle Game
+
+During the middle game, the hiders may freely move anywhere within their hiding zone. Their job during this period is to answer questions
+from the seekers, take photos in preparation for photo questions, and explore the zone for a hiding spot for the endgame.
+
+The seekers will use this time to ask questions to narrow down the possible zones the hiders could be in. After each question, the hiders
+will draw a number of cards from the deck, and choose some of them to keep in their hand. The number of cards they draw and choose depends
+on the type of question asked.
+
+### End Game
+
+The end game begins when the seekers enter the hiding zone *and* step off public transit if they were on it. The end game will begin even if
+the seekers do not know they are in the hiding zone. When the end game starts, the hiders must freeze in their current location, called the
+"hiding spot". During the end game, the hiders cannot use any prepared photos for photo questions, and must take all photos anew as they are
+asked.
+
+If the seekers leave the zone during the end game, the end game does not pause or stop. If the seekers leave the zone during the endgame for
+an excessive period of time, the helpdesk may allow the hiders to stretch their legs and move around a bit, but all questions must be
+answered as if they are still stuck in the same spot.
+
+The seekers will continue asking questions to narrow down the hiding spot during the endgame. The round ends when the seekers know where the
+hiders are, and are within {{ size.found_distance }} of them.
+
+### Rotating Rounds
+
+Once found, the hiders' total time will be the time between when the seekers were released and when they were found, plus any time bonus
+cards they have, plus or minus any time penalties given by the helpdesk for either team accidentally breaking the rules.
+
+All players travel back to the starting point of the map to start the next round. They exchange equipment as necessary (e.g. the old hiders
+give the new hiders the card deck), and switch up the trackers so that the new hiders can see the new seekers' location, and the new seekers
+can't see the new hiders' location.
+
+## Hiding
+
+During the hiding period, you do not necessarily need to decide where your hiding zone is (although we would recommend planning it ahead of
+time). If your hiding zone intersects the edge of the map (e.g. the edge of Luxembourg), you are also not allowed to leave the map.
+
+In the middle game it is important to anticipate in advance possible photo questions that the seekers could ask, and take photos for them
+early on. This is so that you are more free to move around the zone in the middle game without constantly rushing to photo locations, and
+more importantly so that you aren't stuck needing to travel to a photo locaion right before the end game.
+
+### Answering Questions
+
+You must answer all questions within 5 minutes of them being asked, or within {{ size.photo_question_time_limit }} for photo questions. We
+recommend you start preparing the answer straight away, then wait for the majority of the time before sending the answer, so that the
+seekers don't get a clue as to how easy the question was to answer, but not to wait too long in case something happens like your mobile data
+cutting out for a minute.
+
+When asked a question, you should check the rule book entry for that question to make sure that you answer it properly. After answering,
+draw and pick the specified number of cards for that question category.
+
+It is the seekers' responsibility to provide necessary information when asking a question. If the seekers fail to provide this, then ask for
+the information rather than trying to work it out for yourself. See the rule book for the necessary information required to send for each
+question.
+
+All questions should be answered relative to the current location you are standing in when you send the answer, *not* the location of your
+transit stop. In some cases it may be possible to move around within your zone to change the answer to the question; this is allowed as long
+as you stay within the zone and answer the question within the time limit.
+
+If it is not possible to answer the question, even given any amount of time, then you may answer "null" and still receive the reward for
+answering the question. An example of a valid reason for answering "null" is that you could not reach the transit stop because you are in
+the end game. You may not answer "null" just because you are too far away, instead you should answer the question late and receive the
+penalty for doing so.
+
+<!-- Will move this to the rule book
+
+When answering questions involving distance, use the measuring tool on Google Maps, and not some other measuring tool, to ensure that you
+get a standardized answer that the seekers can interpret correctly. If you are comparing two distances and they appear the same on Google
+Maps, ask helpdesk for a more precise measurement. For radar questions, see the following table:
+
+Radar Size         | Answer "hit" when      | Answer "miss" when
+-------------------|------------------------|------------------------
+{{ size.radar_1 }} | {{ size.radar_1_hit }} | {{ size.radar_1_miss }}
+{{ size.radar_2 }} | {{ size.radar_2_hit }} | {{ size.radar_2_miss }}
+{{ size.radar_3 }} | {{ size.radar_3_hit }} | {{ size.radar_3_miss }}
+{{ size.radar_4 }} | {{ size.radar_4_hit }} | {{ size.radar_4_miss }}
+{{ size.radar_5 }} | {{ size.radar_5_hit }} | {{ size.radar_5_miss }}
+{{ size.radar_6 }} | {{ size.radar_6_hit }} | {{ size.radar_6_miss }}
+{{ size.radar_7 }} | {{ size.radar_7_hit }} | {{ size.radar_7_miss }}
+{{ size.radar_8 }} | {{ size.radar_8_hit }} | {{ size.radar_8_miss }}
+{{ size.radar_9 }} | {{ size.radar_9_hit }} | {{ size.radar_9_miss }}
+
+-->
+
+### Using Cards
+
+There are three types of card:
+- **Time bonuses** are added to your total hiding time at the end of the round.
+- **Power ups** benefit you in some way, such as discard 1 draw 2, and increasing the size of your hand.
+- **Curses** slow down the seekers in some way.
+
+Time bonuses must be kept until the end of the round to be applied. Power ups and curses can be played at any time, unless otherwise
+specified. Your default hand size is 6 unless expanded by the hand size power up. If you ever get more cards than your hand size, you must
+immediately use or discard some cards until you are down to the hand size again.
+
+Curses often have a casting cost, which must be applied before sending the seekers the curse.
+
+A full list of cards is available in the rule book.
+
+## Seeking
+
+When asking questions, it is your responsibility to provide precise enough information to make sure that you can interpret the answer in the
+same way that the hiders did when providing it. Check the rule book for details about how to ask each question and how to interpret the
+answer, before asking the question. In general though, precise information may include coordinates of your current location (as your tracker
+may be inaccurate or out of date), and a screenshot of all the points of interest (e.g. parks) your Google Maps is showing you.
+
+While seeking, you may find it helpful to narrow down the hiders' location using the
+[JetLag map generator](https://taibeled.github.io/JetLagHideAndSeek/).
+
+## Other Rules to know about
+
+- Both the seekers and the hiders may only use public transport of the type specified by the game map.
+- Both the seekers and the hiders must stay in the game map at all times.
+
+## Common Mistakes
+
+### Forgetting to draw cards
+Don't forget to draw cards after answering a question!
+
+### Forgetting to apply the casting cost of a curse
+Every time you play a curse, **check the casting cost in bold at the bottom**! Forgetting to do this may give you an unfair advantage.
+
+### Not interpreting the answer to radar questions correctly
+Due to the impreciseness of Google Maps' measuring tool, the actual radius you should draw is not the same as the radius specified in the
+question. A full table of actual radiuses to draw is in radar questions section in the rule book.
+
+### Forgetting about radar dodging
+Remember that if they're lucky, during the middle game the hiders can move around within their zone to deliberately change the answer to
+your question! This is called "radar dodging", and you should take this into account when looking at the map of zones; even if the transit
+stop itself would miss a radar, they may move somewhere where the radar is a hit. Radar dodging doesn't only apply to radars, it can happen
+with any question which relies on the hiders' precise location. It's even possible for the entire map to appear to be ruled out on the map
+generator: this can happen when the hiders have answered different questions in different locations.
