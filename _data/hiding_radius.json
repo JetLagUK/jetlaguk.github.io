@@ -1,0 +1,14 @@
+{
+  "small": {
+    "metric": "500m",
+    "imperial": "¼ mile"
+  },
+  "medium": {
+    "metric": "500m",
+    "imperial": "¼ mile"
+  },
+  "large": {
+    "metric": "1km",
+    "imperial": "½ mile"
+  }
+}

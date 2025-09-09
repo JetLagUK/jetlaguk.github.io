@@ -1,13 +1,15 @@
 ---
 pagination:
-  data: sizes
+  data: sizes_and_units
   size: 1
-  alias: size
+  alias: combo
 layout: layout.njk
-permalink: "/hns-briefing-{{ size.size }}-{{ size.units }}.html"
+permalink: "/hns-briefing-{{ combo.size.name }}-{{ combo.unit.name }}.html"
+eleventyComputed:
+  title: "Hide and Seek Briefing ({{ combo.size.name | capitalize }} Games)"
 ---
 
-# Hide and Seek Briefing ({{ size.size | capitalize }} Games)
+# Hide and Seek Briefing ({{ combo.size.name | capitalize }} Games)
 
 Hide and Seek is a game where the hiders try to hide in a hiding zone, and the seekers try to find them as quickly as possible. The seekers
 ask questions from a set list of allowed questions, which the hiders must answer truthfully. As a reward for answering, the hiders draw 
@@ -36,9 +38,9 @@ This hider needs to provide their email to the seeker in DMs. To share your loca
 ### Hiding Period
 
 The hiders choose a transit stop on which to centre their hiding zone. Depending on the game map you're playing, the "transit stop" may be
-a bus stop, a tram stop, a train station, or any one of these. The "hiding zone" is a {{ size.hiding_radius }} radius circle centred on the
-transit stop. During the hiding period, the hiders have {{ size.hiding_time }} to travel to their transit stop using any allowed means of
-transport, during which time the seekers are frozen at the start location.
+a bus stop, a tram stop, a train station, or any one of these. The "hiding zone" is a {{ hiding_radius[combo.size.name][combo.unit.name] }} radius
+circle centred on the transit stop. During the hiding period, the hiders have {{ combo.size.hiding_time }} to travel to their transit stop using
+any allowed means of transport, during which time the seekers are frozen at the start location.
 
 ### Middle Game
 
@@ -61,7 +63,7 @@ an excessive period of time, the helpdesk may allow the hiders to stretch their 
 answered as if they are still stuck in the same spot.
 
 The seekers will continue asking questions to narrow down the hiding spot during the endgame. The round ends when the seekers know where the
-hiders are, and are within {{ size.found_distance }} of them.
+hiders are, and are within {{ combo.unit.found_distance }} of them.
 
 ### Rotating Rounds
 
@@ -81,9 +83,11 @@ In the middle game it is important to anticipate in advance possible photo quest
 early on. This is so that you are more free to move around the zone in the middle game without constantly rushing to photo locations, and
 more importantly so that you aren't stuck needing to travel to a photo locaion right before the end game.
 
+During the end game, you must hide no more than {{ combo.unit.hiding_distance_from_path }} from a road or path which is marked on Google Maps.
+
 ### Answering Questions
 
-You must answer all questions within 5 minutes of them being asked, or within {{ size.photo_question_time_limit }} for photo questions. We
+You must answer all questions within 5 minutes of them being asked, or within {{ combo.size.photo_question_time_limit }} for photo questions. We
 recommend you start preparing the answer straight away, then wait for the majority of the time before sending the answer, so that the
 seekers don't get a clue as to how easy the question was to answer, but not to wait too long in case something happens like your mobile data
 cutting out for a minute.
@@ -110,17 +114,17 @@ When answering questions involving distance, use the measuring tool on Google Ma
 get a standardized answer that the seekers can interpret correctly. If you are comparing two distances and they appear the same on Google
 Maps, ask helpdesk for a more precise measurement. For radar questions, see the following table:
 
-Radar Size         | Answer "hit" when      | Answer "miss" when
--------------------|------------------------|------------------------
-{{ size.radar_1 }} | {{ size.radar_1_hit }} | {{ size.radar_1_miss }}
-{{ size.radar_2 }} | {{ size.radar_2_hit }} | {{ size.radar_2_miss }}
-{{ size.radar_3 }} | {{ size.radar_3_hit }} | {{ size.radar_3_miss }}
-{{ size.radar_4 }} | {{ size.radar_4_hit }} | {{ size.radar_4_miss }}
-{{ size.radar_5 }} | {{ size.radar_5_hit }} | {{ size.radar_5_miss }}
-{{ size.radar_6 }} | {{ size.radar_6_hit }} | {{ size.radar_6_miss }}
-{{ size.radar_7 }} | {{ size.radar_7_hit }} | {{ size.radar_7_miss }}
-{{ size.radar_8 }} | {{ size.radar_8_hit }} | {{ size.radar_8_miss }}
-{{ size.radar_9 }} | {{ size.radar_9_hit }} | {{ size.radar_9_miss }}
+Radar Size               | Answer "hit" when            | Answer "miss" when
+-------------------------|------------------------------|------------------------------
+{{ combo.unit.radar_1 }} | {{ combo.unit.radar_1_hit }} | {{ combo.unit.radar_1_miss }}
+{{ combo.unit.radar_2 }} | {{ combo.unit.radar_2_hit }} | {{ combo.unit.radar_2_miss }}
+{{ combo.unit.radar_3 }} | {{ combo.unit.radar_3_hit }} | {{ combo.unit.radar_3_miss }}
+{{ combo.unit.radar_4 }} | {{ combo.unit.radar_4_hit }} | {{ combo.unit.radar_4_miss }}
+{{ combo.unit.radar_5 }} | {{ combo.unit.radar_5_hit }} | {{ combo.unit.radar_5_miss }}
+{{ combo.unit.radar_6 }} | {{ combo.unit.radar_6_hit }} | {{ combo.unit.radar_6_miss }}
+{{ combo.unit.radar_7 }} | {{ combo.unit.radar_7_hit }} | {{ combo.unit.radar_7_miss }}
+{{ combo.unit.radar_8 }} | {{ combo.unit.radar_8_hit }} | {{ combo.unit.radar_8_miss }}
+{{ combo.unit.radar_9 }} | {{ combo.unit.radar_9_hit }} | {{ combo.unit.radar_9_miss }}
 
 -->
 
